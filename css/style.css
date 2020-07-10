@@ -871,22 +871,25 @@ a {
 /*subscribe */
 
 .distribution {
-  display: inline-block;
+  display: flex;
   padding-left: 94px;
   padding-top: 45px;
   margin: 0px;
 }
 
-.subscribe {
+.form-subscribe {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 20px;
   display: block;
   margin: 0px;
 }
 
 .email {
-  display: inline-block;
+  display: block;
   width: 358px;
   height: 50px;
+  padding-left: 16px;
   margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -895,8 +898,20 @@ a {
   background-color: #2f303a;
 }
 
+.subscribe {
+  display: block;
+  padding-bottom: 20px;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03px;
+  color: var(--white);
+}
 .button-footer {
   display: inline-flex;
+  margin-top: 44px;
   width: 200px;
   height: 50px;
   background: var(--blue);
