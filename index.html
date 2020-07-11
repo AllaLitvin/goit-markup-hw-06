@@ -73,72 +73,59 @@
           <button class="hero-buttom" data-open-modal href>
             Заказать услугу
           </button>
-        </div>
-        <div class="backdrop is-hidden" data-backdrop>
-          <div class="modal">
-            <div role="form-group">
-              <h2 class="form-title">
-                Оставьте свои данные, мы вам перезвоним
-              </h2>
-              <ul class="form-list">
-                <li class="form-item">
-                  <input type="text" name="message" placeholder="Имя" />
-                </li>
-                <li class="form-item">
-                  <input type="tel" name="telephone" placeholder="Телефон" />
-                </li>
-                <li class="form-item">
-                  <input type="email" name="email" placeholder="Почта" />
-                </li>
-                <li class="form-item comment">
-                  <textarea
-                    name="comment"
-                    rows="5"
-                    cols="80"
-                    placeholder="Комментарий"
-                  >
-                  </textarea>
-                </li>
-
-                <li class="form-item">
-                  <label for="confidential"
-                    >Соглашаюсь с сылкой и принимаю
-                    <a href="/">Условия договора</a></label
-                  >
-                  <input
-                    id="confidential"
-                    name="confidential"
-                    type="checkbox"
-                    value="music"
-                  />
-                </li>
-              </ul>
-            </div>
-            <button data-close-modal>Закрыть</button>
-          </div>
-        </div>
-
-        <script>
-          const refs = {
-            openModalBtn: document.querySelector("[data-open-modal]"),
-            closeModalBtn: document.querySelector("[data-close-modal]"),
-            backdrop: document.querySelector("[data-backdrop]"),
-          };
-
-          refs.openModalBtn.addEventListener("click", toggleModal);
-          refs.closeModalBtn.addEventListener("click", toggleModal);
-
-          refs.backdrop.addEventListener("click", logBackdropClick);
-
-          function toggleModal() {
-            refs.backdrop.classList.toggle("is-hidden");
-          }
-
-          function logBackdropClick() {
-            console.log("Это клик в бекдроп");
-          }
-        </script>
       </section>
+
+      
+      <div class="backdrop is-hidden" data-backdrop>
+        <div class="modal">
+          <div class="form-group">
+            <h2 class="form-title">
+              Оставьте свои данные, мы вам перезвоним
+            </h2>
+            <div class="form-list">
+                <input type="text" name="message" class="form-item" />
+                <label for="message" class="form-label">Имя</label>
+<svg class="modal-icon">
+<use href="../img/symbol-defs-non.svg#icon-person-black"></use>
+</svg>
+            </div>
+            <div class="form-list">
+              <input type="tel" name="telephone"  class="form-item" />
+                <label for="telephone" class="form-label" >Телефон</label>
+                <svg class="modal-icon">
+                  <use href="../img/symbol-defs-non.svg#icon-telephone"></use>
+                </svg>
+              </div>
+              <div class="form-list">
+              <input type="email" name="mail" class="form-item" autocomplete="off"/>
+                <label for="mail" class="form-label">Почта
+                </label>
+                <svg class="modal-icon">
+                <use href="../img/symbol-defs-non.svg#icon-mail"></use>
+                </svg>
+              </div>
+
+                <div class="form-list">
+              <textarea name="comment" rows="150" cols="80"class="form-item">
+              </textarea>
+              <label for="comment" class="form-label comment">Комментарий
+              </label>
+              </div>
+    
+
+            <div class="form-list">
+              <input id="confidentiality" name="confidential" type="checkbox" />
+              <label for="confidentiality">Соглашаюсь с cсылкой и принимаю
+                <a href="/">Условия договора</a></label>
+            
+            </div>
+            <button class="button-submit">Отправить</button>
+            <button class="button-close" data-close-modal></button>
+            </div>
+                       
+          </div>
+          
+      </div>
       <!--ADVANTAGES-->
       <div class="container">
         <section class="section features">
@@ -516,5 +503,26 @@
 
       <p class="developed container">2020 | Developed by GoIT Students</p>
     </footer>
+
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      refs.backdrop.addEventListener("click", logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle("is-hidden");
+      }
+
+      function logBackdropClick() {
+        console.log("Это клик в бекдроп");
+      }
+    </script>
   </body>
 </html>
