@@ -476,7 +476,7 @@ background color footer: #2F303A;*/
 
 .checkbox:checked + .checkbox-icon {
   background-color: var(--blue);
-  background-image: url(../img/vector-on.svg);
+  background-image: url("../img/close-black.svg");
   border: 2px solid var(--blue);
 }
 
