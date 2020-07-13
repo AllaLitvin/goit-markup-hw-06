@@ -301,7 +301,6 @@ background color footer: #2F303A;*/
   width: 18px;
   height: 18px;
   align-items: center;
-  fill: currentColor;
 }
 
 .icon-button-close:hover {
@@ -1138,15 +1137,19 @@ a {
   margin-left: 10px;
 }
 
-/*copirate*/
+/*copirate footer*/
 .developed {
-  display: flex;
-  justify-self: center;
-  align-content: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: block;
+  align-self: center;
+  text-align: center;
   font-style: normal;
   font-weight: normal;
+  margin: auto;
   font-size: 12px;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.4);
+}
+
+.copirate {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
