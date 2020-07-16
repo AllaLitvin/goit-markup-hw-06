@@ -476,7 +476,6 @@ background color footer: #2F303A;*/
     
      
 }
-
 .checkbox label::before{
     height: 15px;
     width: 15px;
@@ -503,9 +502,7 @@ background color footer: #2F303A;*/
 }
 
 .checkbox input[type="checkbox"]:focus + label::after {
-    content: "";
-
-       
+    content: "";    
 }
 
 .checkbox input[type="checkbox"]:checked + label::before {
@@ -516,12 +513,9 @@ background color footer: #2F303A;*/
 
 .rules {
   color: var(--blue);
-  text-decoration: underline;
-
-
+  text-decoration: underline;}
 
 /*common section options*/
-
 .section {
   display: block;
   padding-top: 94px;
